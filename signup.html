@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Sign Up Page</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+        />
+        <link rel="stylesheet" href="css/signupstyle.css" />
+    </head>
+    <body>
+        <div id="app">
+            <div class="app-view">
+                <header class="app-header">
+                    <h1>Academic Master</h1>
+                    Join us,<br />
+                    <span class="app-subheading">
+                        sign up to get started<br />
+                        with Academic Master.
+                    </span>
+                </header>
+                <div class="input-group">
+                    <input type="text" required placeholder="Full Name" />
+                    <input type="email" required placeholder="Email Address" />
+                    <input type="password" required placeholder="Password" />
+                </div>
+                <div class="input-group">
+                    <input
+                        type="password"
+                        required
+                        placeholder="Confirm Password"
+                    />
+                    <input
+                        type="text"
+                        required
+                        placeholder="High School Name"
+                    />
+                    <input
+                        type="number"
+                        required
+                        placeholder="Graduation Year"
+                    />
+                </div>
+                <div class="input-group">
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="stream"
+                            value="Commerce/Arts"
+                            required
+                        />
+                        Commerce/Arts
+                    </label>
+                    <label class="radio-option">
+                        <input
+                            type="radio"
+                            name="stream"
+                            value="Science"
+                            required
+                        />
+                        Science
+                    </label>
+                </div>
+                <div
+                    id="science-options"
+                    class="input-group"
+                    style="display: none"
+                >
+                    <div class="checkbox-group">
+                        <label
+                            ><input
+                                type="checkbox"
+                                name="subjects"
+                                value="Physics"
+                            />
+                            Physics</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                name="subjects"
+                                value="Chemistry"
+                            />
+                            Chemistry</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                name="subjects"
+                                value="Math"
+                            />
+                            Math</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                name="subjects"
+                                value="Biology"
+                            />
+                            Biology</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                name="subjects"
+                                value="Computer Science"
+                            />
+                            Computer Science</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                name="subjects"
+                                value="Fashion Design"
+                            />
+                            Fashion Design</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                name="subjects"
+                                value="Biotechnology"
+                            />
+                            Biotechnology</label
+                        >
+                        <label
+                            ><input
+                                type="checkbox"
+                                name="subjects"
+                                value="Informatics Practices"
+                            />
+                            Informatics Practices</label
+                        >
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input
+                        type="number"
+                        step="1"
+                        required
+                        placeholder="12th Cut-Off"
+                    />
+                    <input type="text" required placeholder="Intended Major" />
+                    <input
+                        type="text"
+                        required
+                        placeholder="Interests and Hobbies"
+                    />
+                </div>
+                <div class="input-group">
+                    <input type="text" required placeholder="Career Goals" />
+                </div>
+                <a href="#" class="app-button">Sign Up</a>
+                <div class="app-register">
+                    Already have an account? <a href="index.html">Login</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            document
+                .querySelectorAll('input[name="stream"]')
+                .forEach((radio) => {
+                    radio.addEventListener("change", function () {
+                        if (this.value === "Science") {
+                            document.getElementById(
+                                "science-options",
+                            ).style.display = "block";
+                        } else {
+                            document.getElementById(
+                                "science-options",
+                            ).style.display = "none";
+                        }
+                    });
+                });
+        </script>
+    </body>
+</html>
